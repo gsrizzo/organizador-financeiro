@@ -13,6 +13,7 @@ Um programa simples para organizar suas finanças pessoais.
 ### Funcionalidades atuais:
 - ✅ Adicionar gastos
 - ✅ Adicionar receitas  
+- ✅ Ver lista de todas as transações
 - ✅ Menu interativo
 - ✅ Loop contínuo (não fecha após cada ação)
 
@@ -20,11 +21,10 @@ Um programa simples para organizar suas finanças pessoais.
 1. Execute: `python main.py`
 2. Digite seu nome
 3. Escolha uma opção do menu
-4. Para sair, escolha a opção 3
+4. Para sair, escolha a opção 4
 
 ##  Próximas funcionalidades:
 - [ ] Salvar dados em arquivo
-- [ ] Ver lista de todas as transações
 - [ ] Ver relatórios e saldo
 - [ ] Categorizar gastos
 
