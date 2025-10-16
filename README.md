@@ -14,22 +14,28 @@ Um programa simples para organizar suas finanças pessoais.
 - ✅ Adicionar gastos
 - ✅ Adicionar receitas  
 - ✅ Ver lista de todas as transações
+- ✅ Análise financeira automática 
+    - Total de gastos e receitas
+    - Saldo disponível
+    - Média de gastos 
 - ✅ Menu interativo
 - ✅ Loop contínuo (não fecha após cada ação)
 
 ### Como usar:
 1. Execute: `python main.py`
 2. Digite seu nome
-3. Escolha uma opção do menu
+3. Escolha uma opção do menu (1-4)
 4. Para sair, escolha a opção 4
 
 ##  Próximas funcionalidades:
 - [ ] Salvar dados em arquivo
-- [ ] Ver relatórios e saldo
-- [ ] Categorizar gastos
+- [ ] Gráficos de análise
+- [ ] Categorizar gastos por tipo
+- [ ] Relatórios por período
 
 ##  Tecnologias:
 - Python 3
+- Análise de dados
 - Git/GitHub
 
 ---
