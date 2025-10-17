@@ -6,9 +6,9 @@ Sistema de controle financeiro pessoal utilizando Python
 **Criado por:** Gabriel  
 **Versão:** 1.0
 
-##  O que faz
+##  O que faz?
 
-Um programa simples para organizar suas finanças pessoais.
+Um programa interativo simples para organizar suas finanças pessoais.
 
 ### Funcionalidades atuais:
 - ✅ Adicionar gastos
@@ -29,9 +29,9 @@ Um programa simples para organizar suas finanças pessoais.
 
 ##  Próximas funcionalidades:
 - [ ] Salvar dados em arquivo
-- [ ] Gráficos de análise
 - [ ] Categorizar gastos por tipo
 - [ ] Relatórios por período
+- [ ] Gráficos de análise
 
 ##  Tecnologias:
 - Python 3
