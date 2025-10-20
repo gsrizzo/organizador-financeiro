@@ -8,7 +8,7 @@ Sistema de controle financeiro pessoal utilizando Python
 
 ##  O que faz?
 
-Um programa interativo simples para organizar suas finanças pessoais.
+Um programa interativo no terminal para organizar suas finanças pessoais.
 
 ### Funcionalidades atuais:
 - ✅ Adicionar gastos
@@ -20,6 +20,7 @@ Um programa interativo simples para organizar suas finanças pessoais.
     - Média de gastos 
 - ✅ Menu interativo
 - ✅ Loop contínuo (não fecha após cada ação)
+- ✅ Salvamento automático em arquivo JSON
 
 ### Como usar:
 1. Execute: `python main.py`
@@ -28,7 +29,6 @@ Um programa interativo simples para organizar suas finanças pessoais.
 4. Para sair, escolha a opção 4
 
 ##  Próximas funcionalidades:
-- [ ] Salvar dados em arquivo
 - [ ] Categorizar gastos por tipo
 - [ ] Relatórios por período
 - [ ] Gráficos de análise
@@ -37,6 +37,7 @@ Um programa interativo simples para organizar suas finanças pessoais.
 - Python 3
 - Análise de dados
 - Git/GitHub
+- JSON para persistência de dados
 
 ---
 *Projeto desenvolvido durante aprendizado de programação*

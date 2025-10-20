@@ -1,3 +1,5 @@
+import json 
+
 def imprimir_cabecalho():
     print("=== BEM-VINDO AO SEU ORGANIZADOR FINANCEIRO ===")
     print("Criado por: Gabriel")
@@ -27,6 +29,12 @@ nome = obter_nome()
 print(f"Olá, {nome}! Vamos organizar suas finanças!")
 
 transacoes = []
+
+try:
+    with open("transacoes.json", "r") as arquivo:
+        transacoes = json.load(arquivo)
+except FileNotFoundError:
+    pass
 
 def adicionar_gasto(transacoes):
     print("\nVocê escolheu adicionar um gasto. ")
@@ -93,8 +101,11 @@ while True:
         mostrar_transacoes(transacoes)
                 
     elif opcao == '4':
+        with open("transacoes.json", "w") as arquivo:
+            json.dump(transacoes, arquivo, indent=4)
         print("Saindo do programa. Até mais!")
         break
+    
     else:
         print("Opção inválida! Tente novamente. ")
     
