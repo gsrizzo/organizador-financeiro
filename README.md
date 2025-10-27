@@ -23,21 +23,26 @@ Um programa interativo no terminal para organizar suas finanças pessoais.
 - ✅ Salvamento automático em arquivo JSON
 
 ### Como usar:
-1. Execute: `python main.py`
-2. Digite seu nome
-3. Escolha uma opção do menu (1-4)
-4. Para sair, escolha a opção 4
+
+1. Clone o repositório:
+    git clone https://github.com/gsrizzo/organizador-financeiro.git
+    cd organizador-financeiro
+2. Execute: `python main.py`
+3. Digite seu nome
+4. Escolha uma opção do menu (1-4)
+5. Para sair, escolha a opção 4
 
 ##  Próximas funcionalidades:
 - [ ] Categorizar gastos por tipo
 - [ ] Relatórios por período
 - [ ] Gráficos de análise
+- [ ] Interface web simples
 
 ##  Tecnologias:
 - Python 3
 - Análise de dados
 - Git/GitHub
-- JSON para persistência de dados
+- JSON (para salvar os dados)
 
 ---
 *Projeto desenvolvido durante aprendizado de programação*

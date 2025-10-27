@@ -14,7 +14,7 @@ def obter_nome():
 
 def mostrar_menu():
         print("\n"+"="*40)
-        print("           MENU PRINCIPAL")
+        print("MENU PRINCIPAL".center(40))
         print("="*40)
         print("1 - Adicionar gasto")
         print("2 - Adicionar receita")
@@ -40,8 +40,24 @@ def adicionar_gasto(transacoes):
     print("\nVocê escolheu adicionar um gasto. ")
     descricao = input("No que você gastou? ")
     valor = float(input("Quanto você gastou? "))
-    transacoes.append({"tipo": "gasto", "descricao": descricao, "valor": valor})
-    print(f"Você gastou R${valor} em {descricao}.")
+    
+    print("Escolha uma categoria para o gasto:")
+    print("1 - Alimentação")
+    print("2 - Transporte")
+    print("3 - Lazer")
+    print("4 - Outros")
+    opcao_cat = input("Digite o número da categoria: ")
+    
+    categorias = {
+        "1": "Alimentação",
+        "2": "Transporte",
+        "3": "Lazer",
+        "4": "Outros"
+    }
+    categoria = categorias.get(opcao_cat, "Outros")
+    
+    transacoes.append({"tipo": "gasto", "descricao": descricao, "valor": valor, "categoria": categoria})
+    print(f"Você gastou R${valor} em {descricao} ({categoria}).")
     print("Gasto registrado!")
 
 def adicionar_receita(transacoes):
@@ -88,6 +104,17 @@ def mostrar_transacoes(transacoes):
         if gastos > 0:
             media_gastos = gastos / total_gastos
             print(f"A média dos seus gastos é de: R${media_gastos:.2f}")
+    gastos_por_categoria = {}
+    for transacao in transacoes:
+        if transacao["tipo"] == "gasto":
+            categoria = transacao.get("categoria", "Outros")
+            gastos_por_categoria[categoria] = gastos_por_categoria.get(categoria, 0) + transacao["valor"]
+            
+    if gastos_por_categoria:
+        print("\n--------GASTOS POR CATEGORIA--------")
+        for categoria, total in gastos_por_categoria.items():
+            print(f"{categoria}: R${total:.2f}")
+            
 
 while True: 
     opcao = mostrar_menu()
