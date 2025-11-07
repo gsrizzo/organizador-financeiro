@@ -1,3 +1,0 @@
-gasto;Chuteira;450.0
-gasto;Roupa;250.0
-receita;Salário;3000.0
