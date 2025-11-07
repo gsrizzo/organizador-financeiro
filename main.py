@@ -1,4 +1,5 @@
 import json 
+from datetime import datetime
 
 def imprimir_cabecalho():
     print("=== BEM-VINDO AO SEU ORGANIZADOR FINANCEIRO ===")
@@ -48,6 +49,8 @@ def adicionar_gasto(transacoes):
     print("4 - Outros")
     opcao_cat = input("Digite o número da categoria: ")
     
+    data_atual = datetime.now().strftime("%d/%m/%Y" "%H:%M:%S")
+    
     categorias = {
         "1": "Alimentação",
         "2": "Transporte",
@@ -56,7 +59,7 @@ def adicionar_gasto(transacoes):
     }
     categoria = categorias.get(opcao_cat, "Outros")
     
-    transacoes.append({"tipo": "gasto", "descricao": descricao, "valor": valor, "categoria": categoria})
+    transacoes.append({"tipo": "gasto", "descricao": descricao, "valor": valor, "categoria": categoria, "data": data_atual})
     print(f"Você gastou R${valor} em {descricao} ({categoria}).")
     print("Gasto registrado!")
 
@@ -64,7 +67,8 @@ def adicionar_receita(transacoes):
     print("\nVocê escolheu adicionar uma receita.")
     descricao = input("Qual a fonte da receita? ")
     valor = float(input("Quanto você recebeu? "))
-    transacoes.append({"tipo": "receita", "descricao": descricao, "valor": valor})
+    data_atual = datetime.now().strftime("%d/%m/%Y" "%H:%M:%S")
+    transacoes.append({"tipo": "receita", "descricao": descricao, "valor": valor, "data": data_atual})
     print(f"Você recebeu R${valor} de {descricao}")
     print("Receita registrada!")
 
@@ -78,7 +82,8 @@ def mostrar_transacoes(transacoes):
             tipo = transacao["tipo"].upper()
             descricao = transacao["descricao"]
             valor = transacao["valor"]
-            print(f"{i}. {tipo}: {descricao} - R${valor}")
+            data = transacao.get("data", "sem data")
+            print(f"{i}. {tipo}: {descricao} - R${valor} ({data})")
                 
         gastos = 0
         receitas = 0
