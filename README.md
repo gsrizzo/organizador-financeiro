@@ -4,11 +4,12 @@ Sistema de controle financeiro pessoal utilizando Python
 # Organizador Financeiro
 
 **Criado por:** Gabriel  
-**Versão:** 1.1
+**Versão:** 1.2 (Atualizado em 17/11/2025)
 
 ##  O que faz?
 
-Um programa interativo no terminal para organizar suas finanças pessoais.
+Um sistema interativo no terminal que ajuda você a registrar e analisar suas finanças.
+Tudo é salvo automaticamente em um arquivo JSON — assim você nunca perde os dados.
 
 ### Funcionalidades atuais:
 - ✅ Adicionar gastos
