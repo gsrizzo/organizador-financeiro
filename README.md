@@ -4,7 +4,7 @@ Sistema de controle financeiro pessoal utilizando Python
 # Organizador Financeiro
 
 **Criado por:** Gabriel  
-**Versão:** 1.2 (Atualizado em 17/11/2025)
+**Versão:** 1.2 (Atualizado em 2025-12-04)
 
 ##  O que faz?
 
@@ -12,17 +12,33 @@ Um sistema interativo no terminal que ajuda você a registrar e analisar suas fi
 Tudo é salvo automaticamente em um arquivo JSON — assim você nunca perde os dados.
 
 ### Funcionalidades atuais:
-- ✅ Adicionar gastos
-- ✅ Adicionar receitas  
-- ✅ Ver lista de todas as transações
-- ✅ Análise financeira automática 
-    - Total de gastos e receitas
-    - Saldo disponível
-    - Média de gastos 
-- ✅ Registros de data e hora em cada transação
-- ✅ Menu interativo
-- ✅ Loop contínuo (não fecha após cada ação)
-- ✅ Salvamento automático em arquivo JSON
+
+🔹 Registro de transações
+
+- Adicionar gastos
+- Adicionar receitas
+- Registro automático de data e hora
+
+🔹 Visualização
+
+- Ver todas as transações registradas
+- Exibir data, tipo, valor e descrição
+
+🔹 Análises financeiras automáticas
+
+- Total de gastos
+- Total de receitas
+- Saldo atualizado com cores:
+    - Verde = positivo
+    - Vermelho = negativo
+    - Amarelo = neutro
+- Média dos gastos
+
+🔹 Outros recursos
+
+- Menu interativo
+- Loop contínuo (o programa não fecha sozinho)
+- Salvamento automático em transacoes.json
 
 ### Como usar:
 
