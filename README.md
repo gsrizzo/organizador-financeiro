@@ -1,69 +1,76 @@
-# organizador-financeiro
-Sistema de controle financeiro pessoal utilizando Python
-
-# Organizador Financeiro
+# Organizador-financeiro
+Sistema de controle financeiro pessoal desenvolvido em Python.
 
 **Criado por:** Gabriel  
-**Versão:** 1.2 (Atualizado em 2025-12-04)
+**Versão:** 1.3 (Atualizado em 2026-01-13)
 
-##  O que faz?
+##  Sobre o projeto
 
-Um sistema interativo no terminal que ajuda você a registrar e analisar suas finanças.
-Tudo é salvo automaticamente em um arquivo JSON — assim você nunca perde os dados.
+Este projeto tem como objetivo ajudar o usuário a registrar e acompanhar suas finanças pessoais de forma simples. 
 
-### Funcionalidades atuais:
+O sistema permite cadastrar gastos e receitas, visualizar transações e gerar análises básicas automaticamente.
+
+Os dados são armazenados localmente em um arquivo JSON, garantindo persistência entre execuções do programa.
+
+Projeto desenvolvido com foco em aprendizado de programação, lógica e fundamentos de análise de dados.
+
+### Funcionalidades:
 
 🔹 Registro de transações
 
 - Adicionar gastos
 - Adicionar receitas
 - Registro automático de data e hora
+- Classificação de gastos por categoria
 
 🔹 Visualização
 
-- Ver todas as transações registradas
-- Exibir data, tipo, valor e descrição
+- Listagem de todas as transações registradas
+- Exibição de tipo, descrição, valor, categoria e data
 
 🔹 Análises financeiras automáticas
 
 - Total de gastos
 - Total de receitas
-- Saldo atualizado com cores:
-    - Verde = positivo
-    - Vermelho = negativo
-    - Amarelo = neutro
+- Saldo atualizado com cores no terminal:
+    - Verde = saldo positivo
+    - Vermelho = saldo negativo
+    - Amarelo = saldo neutro
 - Média dos gastos
+- Total de gastos por categoria
 
 🔹 Outros recursos
 
-- Menu interativo
-- Loop contínuo (o programa não fecha sozinho)
-- Salvamento automático em transacoes.json
+- Menu interativo no terminal
+- Loop contínuo de execução (o programa não fecha sozinho)
+- Salvamento automático em arquivo 'transacoes.json'
 
 ### Como usar:
 
 1. Clone o repositório:
     git clone https://github.com/gsrizzo/organizador-financeiro.git
+2. Acesse a pasta do projeto:
     cd organizador-financeiro
-2. Execute: `python main.py`
-3. Digite seu nome
-4. Escolha uma opção do menu (1-4)
-5. Para sair, escolha a opção 4
+3. Execute o programa: `python main.py`
+4. Digite seu nome
+5. Utilize o menu para registrar e visualizar suas finanças
 
-##  Próximas funcionalidades:
-- [ ] Categorizar gastos por tipo
-- [ ] Relatórios e estatísticas com pandas
-- [ ] Gráficos interativos (matplotlib / plotly)
-- [ ] Exportar relatórios em CSV e PDF
+##  Próximas funcionalidades planejadas:
+- [ ] Análises mais avançadas utilizando pandas
+- [ ] Gráficos interativos
+- [ ] Exportar relatórios em CSV 
 - [ ] Interface web simples
 
 ##  Tecnologias:
 - Python 3
-- Análise de dados
+- Lógica de programação
+- Análise básica de dados
+- Programação orientada a objetos
 - Git/GitHub
 - JSON (para salvar os dados)
 
 ---
 *Projeto desenvolvido durante aprendizado de programação e Ciência de Dados*
 
-Desenvolvido por Gabriel Rizzo — em constante evolução
+Autor: Gabriel Rizzo  
+Em constante evolução 🚀

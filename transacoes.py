@@ -2,6 +2,27 @@ from utils import obter_valor
 from transacao import Transacao
 from cores import Cores
 
+def mostrar_saldo(transacoes):
+    total_gastos = 0
+    total_receitas = 0
+    
+    for transacao in transacoes:
+        if transacao["tipo"] == "gasto":
+            total_gastos += transacao["valor"]
+        elif transacao["tipo"] == "receita":
+            total_receitas += transacao["valor"]
+            
+    saldo = total_receitas - total_gastos
+    
+    if saldo > 0:
+        cor = Cores.VERDE
+    elif saldo < 0:
+        cor = Cores.VERMELHO
+    else:
+        cor = Cores.AMARELO
+        
+    print(f"\nSaldo atual: {cor}R${saldo:.2f}{Cores.RESET}\n")
+
 # Registra um novo gasto na lista de transações
 def adicionar_gasto(transacoes):
     print("\nVocê escolheu adicionar um gasto. ")
@@ -64,26 +85,26 @@ def mostrar_transacoes(transacoes):
             else:
                 print(f"{i}. {tipo}: {descricao} - R${valor:.2f} - {data}")
         
-        total_gastos = 0
-        gastos = 0
+        quantidade_gastos = 0
+        valor_total_gastos = 0
         receitas = 0
         
         for transacao in transacoes:
             if transacao["tipo"] == "gasto":
-                gastos += transacao["valor"]
-                total_gastos += 1
+                valor_total_gastos += transacao["valor"]
+                quantidade_gastos += 1
             elif transacao["tipo"] == "receita":
                 receitas += transacao["valor"]
         
         # Relatório geral    
         print("\n--------ANÁLISE DOS DADOS--------")
-        print(f"Total de gastos: R${gastos:.2f}")
+        print(f"Total de gastos: R${valor_total_gastos:.2f}")
         print(f"Total de receitas: R${receitas:.2f}")
         mostrar_saldo(transacoes)
         
                     
-        if gastos > 0:
-            media_gastos = gastos / total_gastos
+        if quantidade_gastos > 0:
+            media_gastos = valor_total_gastos / quantidade_gastos
             print(f"A média dos seus gastos é de: R${media_gastos:.2f}")
    
         gastos_por_categoria = {}
@@ -98,25 +119,6 @@ def mostrar_transacoes(transacoes):
                 print(f"{categoria}: R${total:.2f}")
                 
 
-def mostrar_saldo(transacoes):
-    total_gastos = 0
-    total_receitas = 0
-    
-    for transacao in transacoes:
-        if transacao["tipo"] == "gasto":
-            total_gastos += transacao["valor"]
-        elif transacao["tipo"] == "receita":
-            total_receitas += transacao["valor"]
-            
-    saldo = total_receitas - total_gastos
-    
-    if saldo > 0:
-        cor = Cores.VERDE
-    elif saldo < 0:
-        cor = Cores.VERMELHO
-    else:
-        cor = Cores.AMARELO
-        
-    print(f"\nSaldo atual: {cor}R${saldo:.2f}{Cores.RESET}\n")
+
     
     
