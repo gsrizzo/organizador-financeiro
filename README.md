@@ -12,7 +12,13 @@ O sistema permite cadastrar gastos e receitas, visualizar transações e gerar a
 
 Os dados são armazenados localmente em um arquivo JSON, garantindo persistência entre execuções do programa.
 
-Projeto desenvolvido com foco em aprendizado de programação, lógica e fundamentos de análise de dados.
+Projeto desenvolvido para consolidar conhecimentos em Python e desenvolvimento.
+
+## Destaques técnicos  
+- Persistência de dados com JSON  
+- Menu interativo no terminal  
+- Estrutura baseada em funções  
+- Cálculo automático de métricas financeiras
 
 ### Funcionalidades:
 
